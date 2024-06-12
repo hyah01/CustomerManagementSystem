@@ -28,7 +28,7 @@ This Customer Management System allows user manage customers through various of 
 ```
 6. Build the project `mvn clean install`
 7. Run the application `mvn spring-boot:run`
-8. Access the application through  `http://localhost:8080`
+8. Access the application through  `http://localhost:9090`
 9. Use Postman to utilize HTTP Requests
 
 ## Usage

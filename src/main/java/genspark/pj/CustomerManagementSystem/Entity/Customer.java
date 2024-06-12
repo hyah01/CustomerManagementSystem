@@ -42,7 +42,7 @@ public class Customer {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-    // To String
+    // To String for easy error logging
     @Override
     public String toString() {
         return "Customer{"+
