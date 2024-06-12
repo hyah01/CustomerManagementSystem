@@ -1,15 +1,12 @@
 package genspark.pj.CustomerManagementSystem.Entity;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-
     private String name;
     private String email;
     private String phoneNumber;
@@ -45,11 +42,11 @@ public class Customer {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-
+    // To String
     @Override
     public String toString() {
-        return "Customer{" +
-                ", name='" + name + '\'' +
+        return "Customer{"+
+                " name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 '}';

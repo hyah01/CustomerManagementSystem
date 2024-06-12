@@ -10,8 +10,8 @@ public interface CustomerService {
     List<Customer> getAllCustomers();
     Customer getCustomerById(Long id);
     List<Customer> getCustomerByName(String name);
-    Customer getCustomerByEmail(String email);
-    Customer getCustomerByPhone(String phonenumber);
+    List<Customer> getCustomerByEmail(String email);
+    List<Customer> getCustomerByPhone(String phonenumber);
     List<Customer> getCustomersByNameSort();
     List<Customer> getCustomersByEmailSort();
     List<Customer> getCustomersByPhoneSort();

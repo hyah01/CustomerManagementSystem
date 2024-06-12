@@ -1,4 +1,4 @@
-package genspark.pj.CustomerManagementSystem.ErrorHandler;
+package genspark.pj.CustomerManagementSystem.Validation;
 
 import genspark.pj.CustomerManagementSystem.Controller.CustomerController;
 import genspark.pj.CustomerManagementSystem.Entity.Customer;

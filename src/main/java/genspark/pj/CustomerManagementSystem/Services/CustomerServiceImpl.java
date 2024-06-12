@@ -32,6 +32,7 @@ public class CustomerServiceImpl implements CustomerService {
         // if customer exist, return it
             if (t.isPresent()) {
                 customer = t.get();
+                logger.info(STR."Successfully Retrieved Customer with ID: \{id}");
             }else {
                 logger.info(STR."Customer Not Found ID: \{id}");
             }
@@ -45,13 +46,13 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer getCustomerByEmail(String email) {
+    public List<Customer> getCustomerByEmail(String email) {
         logger.info(STR."Attempting to Retrieve a Customer by Email: \{email}");
         return this.customerDAO.findByEmail(email);
     }
 
     @Override
-    public Customer getCustomerByPhone(String phonenumber) {
+    public List<Customer> getCustomerByPhone(String phonenumber) {
         logger.info(STR."Attempting to Retrieve a Customer by Phone Number: \{phonenumber}");
         return this.customerDAO.findByPhone(phonenumber);
     }
@@ -83,8 +84,6 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     public List<Customer> addCustomers(List<Customer> customers) {
-        logger.info("Attempting to Add Customers");
-
         if (customers.size() == 1) {
             logger.info("Adding a Single Customer");
             return List.of(this.customerDAO.save(customers.getFirst()));
@@ -95,8 +94,6 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     public List<Customer> updateCustomers(List<Customer> customers) {
-        logger.info("Attempting to Update Customers");
-
         if (customers.size() == 1) {
             logger.info("Updating a Single Customer");
             return List.of(this.customerDAO.save(customers.getFirst()));

@@ -918,7 +918,7 @@ java.lang.RuntimeException: Customer Not Found :5
 2024-06-12 10:52:40 [http-nio-9090-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
 2024-06-12 10:52:40 [http-nio-9090-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class genspark.pj.CustomerManagementSystem.Entity.Customer (java.util.ArrayList is in module java.base of loader 'bootstrap'; genspark.pj.CustomerManagementSystem.Entity.Customer is in unnamed module of loader 'app')] with root cause
 java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class genspark.pj.CustomerManagementSystem.Entity.Customer (java.util.ArrayList is in module java.base of loader 'bootstrap'; genspark.pj.CustomerManagementSystem.Entity.Customer is in unnamed module of loader 'app')
-	at genspark.pj.CustomerManagementSystem.ErrorHandler.CustomerValidator.validate(CustomerValidator.java:19)
+	at genspark.pj.CustomerManagementSystem.Validation.CustomerValidator.validate(CustomerValidator.java:19)
 	at genspark.pj.CustomerManagementSystem.Controller.CustomerController.addCustomers(CustomerController.java:67)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -1006,7 +1006,7 @@ java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class 
 2024-06-12 11:00:02 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
 2024-06-12 11:00:02 [http-nio-9090-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class genspark.pj.CustomerManagementSystem.Entity.Customer (java.util.ArrayList is in module java.base of loader 'bootstrap'; genspark.pj.CustomerManagementSystem.Entity.Customer is in unnamed module of loader 'app')] with root cause
 java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class genspark.pj.CustomerManagementSystem.Entity.Customer (java.util.ArrayList is in module java.base of loader 'bootstrap'; genspark.pj.CustomerManagementSystem.Entity.Customer is in unnamed module of loader 'app')
-	at genspark.pj.CustomerManagementSystem.ErrorHandler.CustomerValidator.validate(CustomerValidator.java:19)
+	at genspark.pj.CustomerManagementSystem.Validation.CustomerValidator.validate(CustomerValidator.java:19)
 	at genspark.pj.CustomerManagementSystem.Controller.CustomerController.addCustomers(CustomerController.java:72)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -1094,7 +1094,7 @@ java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class 
 2024-06-12 11:02:15 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
 2024-06-12 11:02:15 [http-nio-9090-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class genspark.pj.CustomerManagementSystem.Entity.Customer (java.util.ArrayList is in module java.base of loader 'bootstrap'; genspark.pj.CustomerManagementSystem.Entity.Customer is in unnamed module of loader 'app')] with root cause
 java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class genspark.pj.CustomerManagementSystem.Entity.Customer (java.util.ArrayList is in module java.base of loader 'bootstrap'; genspark.pj.CustomerManagementSystem.Entity.Customer is in unnamed module of loader 'app')
-	at genspark.pj.CustomerManagementSystem.ErrorHandler.CustomerValidator.validate(CustomerValidator.java:19)
+	at genspark.pj.CustomerManagementSystem.Validation.CustomerValidator.validate(CustomerValidator.java:19)
 	at genspark.pj.CustomerManagementSystem.Controller.CustomerController.addCustomers(CustomerController.java:72)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -1182,7 +1182,7 @@ java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class 
 2024-06-12 11:03:12 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
 2024-06-12 11:03:12 [http-nio-9090-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class genspark.pj.CustomerManagementSystem.Entity.Customer (java.util.ArrayList is in module java.base of loader 'bootstrap'; genspark.pj.CustomerManagementSystem.Entity.Customer is in unnamed module of loader 'app')] with root cause
 java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class genspark.pj.CustomerManagementSystem.Entity.Customer (java.util.ArrayList is in module java.base of loader 'bootstrap'; genspark.pj.CustomerManagementSystem.Entity.Customer is in unnamed module of loader 'app')
-	at genspark.pj.CustomerManagementSystem.ErrorHandler.CustomerValidator.validate(CustomerValidator.java:19)
+	at genspark.pj.CustomerManagementSystem.Validation.CustomerValidator.validate(CustomerValidator.java:19)
 	at genspark.pj.CustomerManagementSystem.Controller.CustomerController.addCustomers(CustomerController.java:72)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -1277,7 +1277,7 @@ org.springframework.beans.NotReadablePropertyException: Invalid property '[0]' o
 	at org.springframework.validation.AbstractPropertyBindingResult.getActualFieldValue(AbstractPropertyBindingResult.java:105)
 	at org.springframework.validation.AbstractBindingResult.rejectValue(AbstractBindingResult.java:117)
 	at org.springframework.validation.Errors.rejectValue(Errors.java:179)
-	at genspark.pj.CustomerManagementSystem.ErrorHandler.CustomerValidator.validate(CustomerValidator.java:32)
+	at genspark.pj.CustomerManagementSystem.Validation.CustomerValidator.validate(CustomerValidator.java:32)
 	at genspark.pj.CustomerManagementSystem.Controller.CustomerController.addCustomers(CustomerController.java:72)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -1446,3 +1446,508 @@ org.springframework.beans.NotReadablePropertyException: Invalid property '[0]' o
 2024-06-12 11:21:26 [http-nio-9090-exec-1] ERROR g.p.C.Controller.CustomerController - Invalid Input
 2024-06-12 11:22:13 [http-nio-9090-exec-3] INFO  g.p.C.Controller.CustomerController - Attempting to Add Customers
 2024-06-12 11:22:13 [http-nio-9090-exec-3] INFO  g.p.C.Controller.CustomerController - Adding Multiple Customers
+2024-06-12 11:28:12 [http-nio-9090-exec-6] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve All Customers
+2024-06-12 11:28:24 [http-nio-9090-exec-7] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve Customers by ID: 152
+2024-06-12 11:29:42 [http-nio-9090-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "Jo"]
+2024-06-12 11:29:59 [http-nio-9090-exec-1] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve Customers by Name: jo
+2024-06-12 11:30:13 [http-nio-9090-exec-3] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve Customers by Name: test
+2024-06-12 11:30:53 [http-nio-9090-exec-4] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Email: gmail
+2024-06-12 11:33:25 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 11:33:25 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-12 11:33:25 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-12 11:34:07 [main] INFO  g.p.C.CustomerManagementSystemApplication - Starting CustomerManagementSystemApplication using Java 22.0.1 with PID 1372 (C:\projects\Genspark\CustomerManagementSystem\target\classes started by hyhuy in C:\projects\Genspark\CustomerManagementSystem)
+2024-06-12 11:34:07 [main] INFO  g.p.C.CustomerManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-12 11:34:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 11:34:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-12 11:34:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 38 ms. Found 1 JPA repository interface.
+2024-06-12 11:34:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 11:34:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-06-12 11:34:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface genspark.pj.CustomerManagementSystem.Repository.CustomerDAO; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2024-06-12 11:34:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 MongoDB repository interfaces.
+2024-06-12 11:34:07 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+2024-06-12 11:34:07 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-12 11:34:07 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-12 11:34:07 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-12 11:34:08 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 963 ms
+2024-06-12 11:34:08 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-12 11:34:08 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-12 11:34:08 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-12 11:34:08 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-12 11:34:08 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-12 11:34:08 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7198ab9a
+2024-06-12 11:34:08 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-12 11:34:08 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-12 11:34:09 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-12 11:34:09 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 11:34:09 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-12 11:34:09 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-12 11:34:10 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.0.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/22.0.1+8-16"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@7f994055, com.mongodb.Jep395RecordCodecProvider@31a1b37b, com.mongodb.KotlinCodecProvider@640c2749]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-06-12 11:34:10 [cluster-ClusterId{value='6669ea22f440e6640bf17b53', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=25496100}
+2024-06-12 11:34:10 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path '/'
+2024-06-12 11:34:10 [main] INFO  g.p.C.CustomerManagementSystemApplication - Started CustomerManagementSystemApplication in 3.852 seconds (process running for 4.144)
+2024-06-12 11:34:15 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-12 11:34:15 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-12 11:34:15 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-12 11:34:15 [http-nio-9090-exec-1] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Email: 
+2024-06-12 11:34:22 [http-nio-9090-exec-3] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Email: gmail
+2024-06-12 11:34:41 [http-nio-9090-exec-4] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Phone Number: 
+2024-06-12 11:34:45 [http-nio-9090-exec-5] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Phone Number: 1234
+2024-06-12 11:34:49 [http-nio-9090-exec-6] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Phone Number: 0
+2024-06-12 11:34:54 [http-nio-9090-exec-7] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Phone Number: null
+2024-06-12 11:34:57 [http-nio-9090-exec-8] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Phone Number: 
+2024-06-12 11:35:02 [http-nio-9090-exec-9] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Phone Number: ""
+2024-06-12 11:35:08 [http-nio-9090-exec-10] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Phone Number: 56
+2024-06-12 11:35:16 [http-nio-9090-exec-2] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Phone Number:  
+2024-06-12 11:35:27 [http-nio-9090-exec-1] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Phone Number: 123456789
+2024-06-12 11:35:43 [http-nio-9090-exec-3] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Phone Number:  1234567896
+2024-06-12 11:35:50 [http-nio-9090-exec-4] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Phone Number: 
+2024-06-12 11:36:12 [http-nio-9090-exec-5] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve Customers by Name: Test
+2024-06-12 11:36:19 [http-nio-9090-exec-6] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Phone Number:  1234567890
+2024-06-12 11:36:23 [http-nio-9090-exec-7] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Phone Number: " 1234567890"
+2024-06-12 11:36:26 [http-nio-9090-exec-8] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Phone Number: 
+2024-06-12 11:36:32 [http-nio-9090-exec-9] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Phone Number: 1234567890
+2024-06-12 11:36:40 [http-nio-9090-exec-10] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Phone Number: 
+2024-06-12 11:36:45 [http-nio-9090-exec-2] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Phone Number: 6198829319
+2024-06-12 11:36:52 [http-nio-9090-exec-1] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Phone Number: 
+2024-06-12 11:36:57 [http-nio-9090-exec-3] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Phone Number: 6198829319
+2024-06-12 11:37:03 [http-nio-9090-exec-4] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve a Customer by Phone Number: 6198829319
+2024-06-12 11:37:29 [http-nio-9090-exec-5] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve Customers by Sorted Names
+2024-06-12 11:37:39 [http-nio-9090-exec-6] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve Customers by Sorted Emails
+2024-06-12 11:37:59 [http-nio-9090-exec-7] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve Customers by Sorted Phone Numbers
+2024-06-12 11:37:59 [http-nio-9090-exec-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1054, SQLState: 42S22
+2024-06-12 11:37:59 [http-nio-9090-exec-7] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Unknown column 'phoneNumber' in 'order clause'
+2024-06-12 11:37:59 [http-nio-9090-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [SELECT * FROM Customer ORDER BY phoneNumber] [Unknown column 'phoneNumber' in 'order clause'] [n/a]; SQL [n/a]] with root cause
+java.sql.SQLSyntaxErrorException: Unknown column 'phoneNumber' in 'order clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:968)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:246)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:167)
+	at org.hibernate.sql.results.jdbc.internal.AbstractResultSetAccess.getMetaData(AbstractResultSetAccess.java:36)
+	at org.hibernate.sql.results.jdbc.internal.AbstractResultSetAccess.getColumnCount(AbstractResultSetAccess.java:52)
+	at org.hibernate.query.results.ResultSetMappingImpl.resolve(ResultSetMappingImpl.java:193)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.resolveJdbcValuesSource(JdbcSelectExecutorStandardImpl.java:327)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:115)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65)
+	at org.hibernate.query.sql.internal.NativeSelectQueryPlanImpl.performList(NativeSelectQueryPlanImpl.java:138)
+	at org.hibernate.query.sql.internal.NativeQueryImpl.doList(NativeQueryImpl.java:628)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:423)
+	at org.hibernate.query.Query.getResultList(Query.java:120)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:129)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:152)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:140)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy119.getCustomerPhoneSort(Unknown Source)
+	at genspark.pj.CustomerManagementSystem.Services.CustomerServiceImpl.getCustomersByPhoneSort(CustomerServiceImpl.java:74)
+	at genspark.pj.CustomerManagementSystem.Controller.CustomerController.getCustomerByPhoneSorted(CustomerController.java:68)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2024-06-12 11:38:14 [http-nio-9090-exec-9] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve Customers by Sorted Phone Numbers
+2024-06-12 11:38:14 [http-nio-9090-exec-9] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1054, SQLState: 42S22
+2024-06-12 11:38:14 [http-nio-9090-exec-9] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Unknown column 'phoneNumber' in 'order clause'
+2024-06-12 11:38:14 [http-nio-9090-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [SELECT * FROM Customer ORDER BY phoneNumber] [Unknown column 'phoneNumber' in 'order clause'] [n/a]; SQL [n/a]] with root cause
+java.sql.SQLSyntaxErrorException: Unknown column 'phoneNumber' in 'order clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:968)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:246)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:167)
+	at org.hibernate.sql.results.jdbc.internal.AbstractResultSetAccess.getMetaData(AbstractResultSetAccess.java:36)
+	at org.hibernate.sql.results.jdbc.internal.AbstractResultSetAccess.getColumnCount(AbstractResultSetAccess.java:52)
+	at org.hibernate.query.results.ResultSetMappingImpl.resolve(ResultSetMappingImpl.java:193)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.resolveJdbcValuesSource(JdbcSelectExecutorStandardImpl.java:327)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:115)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65)
+	at org.hibernate.query.sql.internal.NativeSelectQueryPlanImpl.performList(NativeSelectQueryPlanImpl.java:138)
+	at org.hibernate.query.sql.internal.NativeQueryImpl.doList(NativeQueryImpl.java:628)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:423)
+	at org.hibernate.query.Query.getResultList(Query.java:120)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:129)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:152)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:140)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy119.getCustomerPhoneSort(Unknown Source)
+	at genspark.pj.CustomerManagementSystem.Services.CustomerServiceImpl.getCustomersByPhoneSort(CustomerServiceImpl.java:74)
+	at genspark.pj.CustomerManagementSystem.Controller.CustomerController.getCustomerByPhoneSorted(CustomerController.java:68)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2024-06-12 11:39:52 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 11:39:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-12 11:39:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-12 11:39:54 [main] INFO  g.p.C.CustomerManagementSystemApplication - Starting CustomerManagementSystemApplication using Java 22.0.1 with PID 41888 (C:\projects\Genspark\CustomerManagementSystem\target\classes started by hyhuy in C:\projects\Genspark\CustomerManagementSystem)
+2024-06-12 11:39:54 [main] INFO  g.p.C.CustomerManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-12 11:39:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 11:39:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-12 11:39:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interface.
+2024-06-12 11:39:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 11:39:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-06-12 11:39:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface genspark.pj.CustomerManagementSystem.Repository.CustomerDAO; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2024-06-12 11:39:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 MongoDB repository interfaces.
+2024-06-12 11:39:55 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+2024-06-12 11:39:55 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-12 11:39:55 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-12 11:39:55 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-12 11:39:55 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 987 ms
+2024-06-12 11:39:55 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-12 11:39:55 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-12 11:39:55 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-12 11:39:56 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-12 11:39:56 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-12 11:39:56 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8f6b4ab
+2024-06-12 11:39:56 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-12 11:39:56 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-12 11:39:57 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-12 11:39:57 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 11:39:57 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-12 11:39:57 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-12 11:39:58 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.0.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/22.0.1+8-16"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@743167c7, com.mongodb.Jep395RecordCodecProvider@6d5a4e59, com.mongodb.KotlinCodecProvider@5710f755]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-06-12 11:39:58 [cluster-ClusterId{value='6669eb7e62b4d43c7784f2d2', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=23692900}
+2024-06-12 11:39:58 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path '/'
+2024-06-12 11:39:58 [main] INFO  g.p.C.CustomerManagementSystemApplication - Started CustomerManagementSystemApplication in 4.001 seconds (process running for 4.292)
+2024-06-12 11:39:59 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-12 11:39:59 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-12 11:39:59 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-06-12 11:39:59 [http-nio-9090-exec-2] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve Customers by Sorted Phone Numbers
+2024-06-12 11:40:38 [http-nio-9090-exec-3] ERROR g.p.C.Controller.CustomerController - Name must not be empty for customer at index 0: Customer{, name='null', email='Test.yo@gmail.com', phoneNumber='6198829319'}
+2024-06-12 11:40:38 [http-nio-9090-exec-3] ERROR g.p.C.Controller.CustomerController - Name must not be empty for customer at index 1: Customer{, name='', email='Test.yo@gmail.com', phoneNumber='6198829319'}
+2024-06-12 11:40:38 [http-nio-9090-exec-3] ERROR g.p.C.Controller.CustomerController - Invalid Input
+2024-06-12 11:42:09 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 11:42:09 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-12 11:42:09 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-12 11:42:12 [main] INFO  g.p.C.CustomerManagementSystemApplication - Starting CustomerManagementSystemApplication using Java 22.0.1 with PID 35480 (C:\projects\Genspark\CustomerManagementSystem\target\classes started by hyhuy in C:\projects\Genspark\CustomerManagementSystem)
+2024-06-12 11:42:12 [main] INFO  g.p.C.CustomerManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-12 11:42:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 11:42:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-12 11:42:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interface.
+2024-06-12 11:42:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 11:42:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-06-12 11:42:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface genspark.pj.CustomerManagementSystem.Repository.CustomerDAO; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2024-06-12 11:42:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 MongoDB repository interfaces.
+2024-06-12 11:42:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+2024-06-12 11:42:13 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-12 11:42:13 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-12 11:42:13 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-12 11:42:13 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1025 ms
+2024-06-12 11:42:13 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-12 11:42:13 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-12 11:42:13 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-12 11:42:13 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-12 11:42:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-12 11:42:13 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d637673
+2024-06-12 11:42:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-12 11:42:13 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-12 11:42:14 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-12 11:42:14 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 11:42:14 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-12 11:42:15 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-12 11:42:15 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.0.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/22.0.1+8-16"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@31a1b37b, com.mongodb.Jep395RecordCodecProvider@640c2749, com.mongodb.KotlinCodecProvider@57ab7b32]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-06-12 11:42:15 [cluster-ClusterId{value='6669ec0757adbc13fd3dd935', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=17470400}
+2024-06-12 11:42:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path '/'
+2024-06-12 11:42:15 [main] INFO  g.p.C.CustomerManagementSystemApplication - Started CustomerManagementSystemApplication in 4.03 seconds (process running for 4.34)
+2024-06-12 11:42:19 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-12 11:42:19 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-12 11:42:19 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-12 11:42:19 [http-nio-9090-exec-2] ERROR g.p.C.Controller.CustomerController - Name must not be empty for customer at index 0: Customer{, name='null', email='Test.yo@gmail.com', phoneNumber='6198829319'}
+2024-06-12 11:42:19 [http-nio-9090-exec-2] ERROR g.p.C.Controller.CustomerController - Name must not be empty for customer at index 1: Customer{, name='', email='Test.yo@gmail.com', phoneNumber='6198829319'}
+2024-06-12 11:42:19 [http-nio-9090-exec-2] ERROR g.p.C.Controller.CustomerController - Invalid Input
+2024-06-12 11:43:32 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 11:43:32 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-12 11:43:32 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-12 11:43:34 [main] INFO  g.p.C.CustomerManagementSystemApplication - Starting CustomerManagementSystemApplication using Java 22.0.1 with PID 31672 (C:\projects\Genspark\CustomerManagementSystem\target\classes started by hyhuy in C:\projects\Genspark\CustomerManagementSystem)
+2024-06-12 11:43:34 [main] INFO  g.p.C.CustomerManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-12 11:43:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 11:43:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-12 11:43:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 1 JPA repository interface.
+2024-06-12 11:43:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 11:43:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-06-12 11:43:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface genspark.pj.CustomerManagementSystem.Repository.CustomerDAO; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2024-06-12 11:43:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 MongoDB repository interfaces.
+2024-06-12 11:43:35 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+2024-06-12 11:43:35 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-12 11:43:35 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-12 11:43:35 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-12 11:43:35 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 998 ms
+2024-06-12 11:43:36 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-12 11:43:36 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-12 11:43:36 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-12 11:43:36 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-12 11:43:36 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-12 11:43:36 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4bdb04c8
+2024-06-12 11:43:36 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-12 11:43:36 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-12 11:43:37 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-12 11:43:37 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 11:43:37 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-12 11:43:37 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-12 11:43:38 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.0.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/22.0.1+8-16"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@743167c7, com.mongodb.Jep395RecordCodecProvider@6d5a4e59, com.mongodb.KotlinCodecProvider@5710f755]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-06-12 11:43:38 [cluster-ClusterId{value='6669ec5a7c46d73467e9f4f1', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=20818800}
+2024-06-12 11:43:38 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path '/'
+2024-06-12 11:43:38 [main] INFO  g.p.C.CustomerManagementSystemApplication - Started CustomerManagementSystemApplication in 3.839 seconds (process running for 4.132)
+2024-06-12 11:43:40 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-12 11:43:40 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-12 11:43:40 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-12 11:43:40 [http-nio-9090-exec-2] ERROR g.p.C.Controller.CustomerController - Name must not be empty for customer at index 0: Customer{, name='null', email='Test.yo@gmail.com', phoneNumber='6198829319'}
+2024-06-12 11:43:40 [http-nio-9090-exec-2] ERROR g.p.C.Controller.CustomerController - Name must not be empty for customer at index 1: Customer{, name='', email='Test.yo@gmail.com', phoneNumber='6198829319'}
+2024-06-12 11:43:40 [http-nio-9090-exec-2] ERROR g.p.C.Controller.CustomerController - Invalid Input
+2024-06-12 11:45:16 [http-nio-9090-exec-4] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve Customers by ID: 1
+2024-06-12 11:45:31 [http-nio-9090-exec-5] INFO  g.p.C.Controller.CustomerController - Attempting to Update Customers
+2024-06-12 11:45:31 [http-nio-9090-exec-5] INFO  g.p.C.Controller.CustomerController - Updating a Single Customer
+2024-06-12 11:45:39 [http-nio-9090-exec-6] INFO  g.p.C.Controller.CustomerController - Attempting to Update Customers
+2024-06-12 11:45:39 [http-nio-9090-exec-6] INFO  g.p.C.Controller.CustomerController - Updating a Single Customer
+2024-06-12 11:46:48 [http-nio-9090-exec-9] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve Customers by ID: 600
+2024-06-12 11:46:48 [http-nio-9090-exec-9] INFO  g.p.C.Controller.CustomerController - Customer Not Found ID: 600
+2024-06-12 11:47:30 [http-nio-9090-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' is not supported]
+2024-06-12 11:47:42 [http-nio-9090-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' is not supported]
+2024-06-12 11:48:45 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 11:48:45 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-12 11:48:45 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-12 11:48:47 [main] INFO  g.p.C.CustomerManagementSystemApplication - Starting CustomerManagementSystemApplication using Java 22.0.1 with PID 37472 (C:\projects\Genspark\CustomerManagementSystem\target\classes started by hyhuy in C:\projects\Genspark\CustomerManagementSystem)
+2024-06-12 11:48:47 [main] INFO  g.p.C.CustomerManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-12 11:48:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 11:48:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-12 11:48:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interface.
+2024-06-12 11:48:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 11:48:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-06-12 11:48:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface genspark.pj.CustomerManagementSystem.Repository.CustomerDAO; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2024-06-12 11:48:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 MongoDB repository interfaces.
+2024-06-12 11:48:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+2024-06-12 11:48:48 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-12 11:48:48 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-12 11:48:48 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-12 11:48:48 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 985 ms
+2024-06-12 11:48:49 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-12 11:48:49 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-12 11:48:49 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-12 11:48:49 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-12 11:48:49 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-12 11:48:49 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71ad959b
+2024-06-12 11:48:49 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-12 11:48:49 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-12 11:48:50 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-12 11:48:50 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 11:48:50 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-12 11:48:50 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-12 11:48:51 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.0.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/22.0.1+8-16"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@3d2be0df, com.mongodb.Jep395RecordCodecProvider@6affbed1, com.mongodb.KotlinCodecProvider@2cf93603]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-06-12 11:48:51 [cluster-ClusterId{value='6669ed9353b7ce6f3947d458', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=18438800}
+2024-06-12 11:48:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path '/'
+2024-06-12 11:48:51 [main] INFO  g.p.C.CustomerManagementSystemApplication - Started CustomerManagementSystemApplication in 3.852 seconds (process running for 4.135)
+2024-06-12 11:48:54 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-12 11:48:54 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-12 11:48:54 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-12 11:48:54 [http-nio-9090-exec-2] WARN  g.p.C.Controller.CustomerController - Attempting to Delete Customer with id:1
+2024-06-12 11:48:55 [http-nio-9090-exec-2] INFO  g.p.C.Controller.CustomerController - Successfully Deleted Customer with id:1
+2024-06-12 11:49:01 [http-nio-9090-exec-3] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve Customers by ID: 1
+2024-06-12 11:49:01 [http-nio-9090-exec-3] INFO  g.p.C.Controller.CustomerController - Customer Not Found ID: 1
+2024-06-12 11:49:11 [http-nio-9090-exec-4] ERROR g.p.C.Controller.CustomerController - Phone must not be empty for customer at index 0: Customer{, name='John D', email='john.doe@example.com', phoneNumber='null'}
+2024-06-12 11:49:11 [http-nio-9090-exec-4] ERROR g.p.C.Controller.CustomerController - Invalid Input
+2024-06-12 11:49:43 [http-nio-9090-exec-5] INFO  g.p.C.Controller.CustomerController - Attempting to Add Customers
+2024-06-12 11:49:43 [http-nio-9090-exec-5] INFO  g.p.C.Controller.CustomerController - Adding a Single Customer
+2024-06-12 12:10:02 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 12:10:02 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-12 12:10:02 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-12 12:10:05 [main] INFO  g.p.C.CustomerManagementSystemApplication - Starting CustomerManagementSystemApplication using Java 22.0.1 with PID 31700 (C:\projects\Genspark\CustomerManagementSystem\target\classes started by hyhuy in C:\projects\Genspark\CustomerManagementSystem)
+2024-06-12 12:10:05 [main] INFO  g.p.C.CustomerManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-12 12:10:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 12:10:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-12 12:10:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interface.
+2024-06-12 12:10:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 12:10:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-06-12 12:10:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface genspark.pj.CustomerManagementSystem.Repository.CustomerDAO; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2024-06-12 12:10:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 MongoDB repository interfaces.
+2024-06-12 12:10:06 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+2024-06-12 12:10:06 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-12 12:10:06 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-12 12:10:06 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-12 12:10:06 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 983 ms
+2024-06-12 12:10:06 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-12 12:10:06 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-12 12:10:06 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-12 12:10:06 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-12 12:10:06 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-12 12:10:07 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d637673
+2024-06-12 12:10:07 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-12 12:10:07 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-12 12:10:07 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-12 12:10:07 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 12:10:07 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-12 12:10:08 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-12 12:10:08 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.0.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/22.0.1+8-16"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@5bb00dcc, com.mongodb.Jep395RecordCodecProvider@57ce8f63, com.mongodb.KotlinCodecProvider@1d92d132]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-06-12 12:10:08 [cluster-ClusterId{value='6669f2900261e43592ebe916', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=24627800}
+2024-06-12 12:10:09 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path '/'
+2024-06-12 12:10:09 [main] INFO  g.p.C.CustomerManagementSystemApplication - Started CustomerManagementSystemApplication in 3.988 seconds (process running for 4.287)
+2024-06-12 12:10:14 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-12 12:10:14 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-12 12:10:14 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-12 12:10:18 [http-nio-9090-exec-2] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve All Customers
+2024-06-12 12:10:18 [http-nio-9090-exec-2] INFO  g.p.C.Controller.CustomerController - Successfully Retrieved All Customers
+2024-06-12 12:10:32 [http-nio-9090-exec-3] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve Customers by ID: 1
+2024-06-12 12:10:32 [http-nio-9090-exec-3] INFO  g.p.C.Controller.CustomerController - Customer Not Found ID: 1
+2024-06-12 12:10:36 [http-nio-9090-exec-4] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve Customers by ID: 2
+2024-06-12 12:10:36 [http-nio-9090-exec-4] INFO  g.p.C.Controller.CustomerController - Successfully Retrieved Customer with ID: 2
+2024-06-12 12:10:55 [http-nio-9090-exec-6] INFO  g.p.C.Controller.CustomerController - Attempting to Update Customers
+2024-06-12 12:10:55 [http-nio-9090-exec-6] INFO  g.p.C.Controller.CustomerController - Adding a Single Customer
+2024-06-12 12:10:55 [http-nio-9090-exec-6] INFO  g.p.C.Controller.CustomerController - Successfully Updated Customers
+2024-06-12 12:11:01 [http-nio-9090-exec-7] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve All Customers
+2024-06-12 12:11:01 [http-nio-9090-exec-7] INFO  g.p.C.Controller.CustomerController - Successfully Retrieved All Customers
+2024-06-12 12:11:22 [http-nio-9090-exec-8] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve Customers by ID: 1
+2024-06-12 12:11:22 [http-nio-9090-exec-8] INFO  g.p.C.Controller.CustomerController - Customer Not Found ID: 1
+2024-06-12 12:11:27 [http-nio-9090-exec-9] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve Customers by ID: 2
+2024-06-12 12:11:27 [http-nio-9090-exec-9] INFO  g.p.C.Controller.CustomerController - Successfully Retrieved Customer with ID: 2
+2024-06-12 12:11:43 [http-nio-9090-exec-1] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve Customers by Name: test
+2024-06-12 12:11:43 [http-nio-9090-exec-1] INFO  g.p.C.Controller.CustomerController - Successfully Retrieved Customers with the name: test
+2024-06-12 12:12:21 [http-nio-9090-exec-2] INFO  g.p.C.Controller.CustomerController - Attempting to Retrieve Customers by Sorted Names
+2024-06-12 12:12:56 [http-nio-9090-exec-3] INFO  g.p.C.Controller.CustomerController - Attempting to Add Customers
+2024-06-12 12:12:56 [http-nio-9090-exec-3] ERROR g.p.C.Controller.CustomerController - Invalid email format for customer at index 0: Customer{, name='Anthony', email='john.doe', phoneNumber='12312389712'}
+2024-06-12 12:12:56 [http-nio-9090-exec-3] ERROR g.p.C.Controller.CustomerController - Validation Failed: [Error in object 'customerList': codes [customer.empty.customerList,customer.empty]; arguments []; default message [Email must not be in valid email format at index 0]]
+2024-06-12 12:17:24 [http-nio-9090-exec-6] INFO  g.p.C.Controller.CustomerController - Attempting to Add Customers
+2024-06-12 12:17:24 [http-nio-9090-exec-6] ERROR g.p.C.Controller.CustomerController - Invalid email format for customer at index 0: Customer{, name='Anthony', email='john.doe', phoneNumber='12312389712'}
+2024-06-12 12:17:24 [http-nio-9090-exec-6] ERROR g.p.C.Controller.CustomerController - Phone must not be empty for customer at index 1: Customer{, name='Anthony b ', email='john.doe@deez.net', phoneNumber=''}
+2024-06-12 12:17:24 [http-nio-9090-exec-6] ERROR g.p.C.Controller.CustomerController - Validation Failed: [Error in object 'customerList': codes [customer.empty.customerList,customer.empty]; arguments []; default message [Email must not be in valid email format at index 0], Error in object 'customerList': codes [customer.empty.customerList,customer.empty]; arguments []; default message [Phone must not be empty for customer at index 1]]
+2024-06-12 12:18:10 [http-nio-9090-exec-7] INFO  g.p.C.Controller.CustomerController - Attempting to Add Customers
+2024-06-12 12:18:10 [http-nio-9090-exec-7] INFO  g.p.C.Controller.CustomerController - Adding Multiple Customers
+2024-06-12 12:18:10 [http-nio-9090-exec-7] INFO  g.p.C.Controller.CustomerController - Successfully Added Customers
+2024-06-12 12:18:31 [http-nio-9090-exec-8] INFO  g.p.C.Controller.CustomerController - Attempting to Update Customers
+2024-06-12 12:18:31 [http-nio-9090-exec-8] INFO  g.p.C.Controller.CustomerController - Adding Multiple Customers
+2024-06-12 12:18:31 [http-nio-9090-exec-8] INFO  g.p.C.Controller.CustomerController - Successfully Updated Customers
+2024-06-12 12:18:49 [http-nio-9090-exec-9] INFO  g.p.C.Controller.CustomerController - Attempting to Update Customers
+2024-06-12 12:18:49 [http-nio-9090-exec-9] ERROR g.p.C.Controller.CustomerController - Email must not be empty for customer at index 0: Customer{, name='Anthony a', email='', phoneNumber='12312389712'}
+2024-06-12 12:18:49 [http-nio-9090-exec-9] ERROR g.p.C.Controller.CustomerController - Phone must not be empty for customer at index 1: Customer{, name='Anthony b ', email='john.doe@deez.net', phoneNumber=''}
+2024-06-12 12:18:49 [http-nio-9090-exec-9] ERROR g.p.C.Controller.CustomerController - Validation Failed: [Error in object 'customerList': codes [customer.empty.customerList,customer.empty]; arguments []; default message [Email must not be empty for customer at index 0], Error in object 'customerList': codes [customer.empty.customerList,customer.empty]; arguments []; default message [Phone must not be empty for customer at index 1]]

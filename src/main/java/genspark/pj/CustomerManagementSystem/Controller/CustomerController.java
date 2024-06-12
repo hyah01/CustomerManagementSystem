@@ -1,12 +1,11 @@
 package genspark.pj.CustomerManagementSystem.Controller;
 
 import genspark.pj.CustomerManagementSystem.Entity.Customer;
-import genspark.pj.CustomerManagementSystem.ErrorHandler.CustomerValidator;
+import genspark.pj.CustomerManagementSystem.Validation.CustomerValidator;
 import genspark.pj.CustomerManagementSystem.Services.CustomerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -32,7 +31,13 @@ public class CustomerController {
 
     @GetMapping("/customers")
     public List<Customer> getCustomers(){
-        return this.cs.getAllCustomers();
+        List<Customer> listOfCustomers = this.cs.getAllCustomers();
+        if (listOfCustomers.isEmpty()){
+            logger.info("There is currently no customer in the database");
+        } else {
+            logger.info("Successfully Retrieved All Customers");
+        }
+        return listOfCustomers;
     }
 
     @GetMapping("/customers/{id}")
@@ -42,15 +47,33 @@ public class CustomerController {
 
     @GetMapping("/customers/name")
     public List<Customer> getCustomerByName(@RequestParam String name) {
-        return this.cs.getCustomerByName(name);
+        List<Customer> listOfCustomers = this.cs.getCustomerByName(name);
+        if (listOfCustomers.isEmpty()){
+            logger.info(STR."There is currently no Customers with the name: \{name}");
+        } else {
+            logger.info(STR."Successfully Retrieved Customers with the name: \{name}");
+        }
+        return listOfCustomers;
     }
     @GetMapping("/customers/email")
-    public Customer getCustomerByEmail(@RequestParam String email) {
-        return this.cs.getCustomerByEmail(email);
+    public List<Customer> getCustomerByEmail(@RequestParam String email) {
+        List<Customer> listOfCustomers = this.cs.getCustomerByEmail(email);
+        if (listOfCustomers.isEmpty()){
+            logger.info(STR."There is currently no Customers with the email: \{email}");
+        } else {
+            logger.info(STR."Successfully Retrieved Customers with the email: \{email}");
+        }
+        return listOfCustomers;
     }
     @GetMapping("/customers/phone")
-    public Customer getCustomerByPhone(@RequestParam String phone) {
-        return this.cs.getCustomerByPhone(phone);
+    public List<Customer> getCustomerByPhone(@RequestParam String phone) {
+        List<Customer> listOfCustomers = this.cs.getCustomerByPhone(phone);
+        if (listOfCustomers.isEmpty()){
+            logger.info(STR."There is currently no Customers with the phone number: \{phone}");
+        } else {
+            logger.info(STR."Successfully Retrieved Customers with the phone number: \{phone}");
+        }
+        return listOfCustomers;
     }
 
     @GetMapping("/customers/name/sorted")
@@ -69,19 +92,31 @@ public class CustomerController {
     }
     @PostMapping("/customers")
     public List<Customer> addCustomers(@Valid @RequestBody List<Customer> customers, BindingResult result){
+        logger.info("Attempting to Add Customers");
         validator.validate(customers,result);
         if (result.hasErrors()){
-            logger.error("Invalid Input");
+            logger.error(STR."Validation Failed: \{result.getAllErrors()}");
         } else {
-            return this.cs.addCustomers(customers);
+            List<Customer> listOfCustomers = this.cs.addCustomers(customers);
+            logger.info("Successfully Added Customers");
+            return listOfCustomers;
         }
         return null;
     }
     @PutMapping("/customers")
-    public List<Customer> updateCustomers(@RequestBody List<Customer> customers){
-        return this.cs.updateCustomers(customers);
+    public List<Customer> updateCustomers(@Valid @RequestBody List<Customer> customers, BindingResult result){
+        logger.info("Attempting to Update Customers");
+        validator.validate(customers,result);
+        if (result.hasErrors()){
+            logger.error(STR."Validation Failed: \{result.getAllErrors()}");
+        } else {
+            List<Customer> listOfCustomers = this.cs.addCustomers(customers);
+            logger.info("Successfully Updated Customers");
+            return listOfCustomers;
+        }
+        return null;
     }
-    @DeleteMapping("/customer/{id}")
+    @DeleteMapping("/customers/{id}")
     public String deleteCustomer(@PathVariable long id){
         return this.cs.deleteCustomerById(id);
     }
