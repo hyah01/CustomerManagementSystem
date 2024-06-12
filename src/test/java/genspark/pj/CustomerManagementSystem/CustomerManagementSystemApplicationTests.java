@@ -5,6 +5,7 @@ import genspark.pj.CustomerManagementSystem.Entity.Customer;
 import genspark.pj.CustomerManagementSystem.Repository.CustomerDAO;
 import genspark.pj.CustomerManagementSystem.Services.CustomerService;
 import genspark.pj.CustomerManagementSystem.Services.CustomerServiceImpl;
+import genspark.pj.CustomerManagementSystem.Validation.CustomerValidator;
 import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -13,8 +14,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.util.ReflectionTestUtils;
+import org.springframework.validation.BindingResult;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -35,18 +38,6 @@ class CustomerManagementSystemApplicationTests {
 	private Customer customer; // Inject the Customer bean
 
 	// TEST ADD CUSTOMERS
-	@Test
-	void testAddOneCustomer() {
-		customer.setName("John Doe");
-		customer.setEmail("john.doe@example.com");
-		customer.setPhoneNumber("1234567890");
-		List<Customer> listOfCustomers = new ArrayList<>();
-		listOfCustomers.add(customer);
-		List<Customer> customers = cs.addCustomers(listOfCustomers);
-
-        assertFalse(customers.isEmpty());
-		assertEquals("John Doe", customers.getFirst().getName());
-	}
 
 	@Test
 	void testAddMultipleCustomer() {
@@ -220,6 +211,115 @@ class CustomerManagementSystemApplicationTests {
 		verify(logger).info("Customer Not Found ID: " + nonExistentId);
 	}
 
+	// Test GET BY NAME || Phone and Email are basically the same
+
+	@Test
+	public void test_retrieve_customers_with_exact_name_match() {
+		CustomerDAO customerDAO = mock(CustomerDAO.class);
+		ReflectionTestUtils.setField(csi, "customerDAO", customerDAO);
+
+		Customer customer1 = new Customer();
+		customer1.setName("John Doe");
+		customer1.setEmail("john.doe@example.com");
+		customer1.setPhoneNumber("1234567890");
+		List<Customer> expectedCustomers = new ArrayList<>();
+		expectedCustomers.add(customer1);
+		when(customerDAO.findByName("John Doe")).thenReturn(expectedCustomers);
+
+		List<Customer> actualCustomers = csi.getCustomerByName("John Doe");
+
+		assertEquals(expectedCustomers, actualCustomers);
+	}
+
+	@Test
+	public void test_retrieve_customers_with_empty_name_string() {
+		CustomerDAO customerDAO = mock(CustomerDAO.class);
+		ReflectionTestUtils.setField(csi, "customerDAO", customerDAO);
+
+		List<Customer> expectedCustomers = Collections.emptyList();
+		when(customerDAO.findByName("")).thenReturn(expectedCustomers);
+
+		List<Customer> actualCustomers = csi.getCustomerByName("");
+
+		assertEquals(expectedCustomers, actualCustomers);
+	}
+
+	@Test
+	public void test_retrieve_customers_no_matching_name_exists() {
+		// Setup
+		CustomerDAO customerDAO = mock(CustomerDAO.class);
+		String name = "NonExistentName";
+		List<Customer> emptyList = new ArrayList<>();
+		when(customerDAO.findByName(name)).thenReturn(emptyList);
+
+		// Execution
+		List<Customer> result = csi.getCustomerByName(name);
+
+		// Assertion
+		assertEquals(0, result.size());
+	}
+
+	@Test
+	public void test_logger_message_on_get_customer_by_name() {
+		CustomerDAO customerDAO = mock(CustomerDAO.class);
+		ReflectionTestUtils.setField(csi, "customerDAO", customerDAO);
+		Logger logger = mock(Logger.class);
+		csi.logger = logger;
+
+		Customer customer1 = new Customer();
+		customer1.setName("John Doe");
+		customer1.setEmail("john.doe@example.com");
+		customer1.setPhoneNumber("1234567890");
+		List<Customer> expectedCustomers = new ArrayList<>();
+		expectedCustomers.add(customer1);
+		when(customerDAO.findByName("John Doe")).thenReturn(expectedCustomers);
+
+		List<Customer> actualCustomers = csi.getCustomerByName("John Doe");
+		verify(logger).info("Attempting to Retrieve Customers by Name: " + "John Doe");
+		assertEquals(expectedCustomers, actualCustomers);
+	}
+
+	// Test Update Customer
+	@Test
+	public void test_update_single_customer() {
+		CustomerDAO customerDAO = mock(CustomerDAO.class);
+		CustomerServiceImpl customerService = new CustomerServiceImpl();
+		ReflectionTestUtils.setField(customerService, "customerDAO", customerDAO);
+		Logger logger = mock(Logger.class);
+		customerService.logger = logger;
+
+		Customer customer = new Customer();
+		customer.setName("John Doe");
+		customer.setEmail("john.doe@example.com");
+		customer.setPhoneNumber("1234567890");
+		List<Customer> customers = List.of(customer);
+
+		when(customerDAO.save(customer)).thenReturn(customer);
+
+		List<Customer> updatedCustomers = customerService.updateCustomers(customers);
+
+		verify(logger).info("Updating a Single Customer");
+		assertEquals(1, updatedCustomers.size());
+		assertEquals(customer, updatedCustomers.get(0));
+	}
 
 
-}
+	@Test
+	public void test_update_empty_customer_list() {
+		CustomerDAO customerDAO = mock(CustomerDAO.class);
+		CustomerServiceImpl customerService = new CustomerServiceImpl();
+		ReflectionTestUtils.setField(customerService, "customerDAO", customerDAO);
+		Logger logger = mock(Logger.class);
+		customerService.logger = logger;
+
+		List<Customer> customers = List.of();
+
+		List<Customer> updatedCustomers = customerService.updateCustomers(customers);
+
+		verify(logger).info("Updating Multiple Customers");
+		assertTrue(updatedCustomers.isEmpty());
+	}
+
+
+
+	}

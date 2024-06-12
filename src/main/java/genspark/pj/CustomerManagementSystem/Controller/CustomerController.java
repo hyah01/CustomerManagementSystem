@@ -124,7 +124,7 @@ public class CustomerController {
         if (result.hasErrors()){
             logger.error(STR."Validation Failed: \{result.getAllErrors()}");
         } else {
-            List<Customer> listOfCustomers = this.cs.addCustomers(customers);
+            List<Customer> listOfCustomers = this.cs.updateCustomers(customers);
             logger.info("Successfully Updated Customers");
             return listOfCustomers;
         }
