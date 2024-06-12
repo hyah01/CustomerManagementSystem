@@ -15,11 +15,9 @@ public interface CustomerService {
     List<Customer> getCustomersByNameSort();
     List<Customer> getCustomersByEmailSort();
     List<Customer> getCustomersByPhoneSort();
-    Customer addCustomer(Customer customer);
-    Customer updateCustomer(Customer customer);
-    String deleteCustomerById(long id);
     List<Customer> addCustomers(List<Customer> customer);
     List<Customer> updateCustomers(List<Customer> customers);
+    String deleteCustomerById(long id);
 
 
 }

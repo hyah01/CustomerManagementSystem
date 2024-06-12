@@ -76,18 +76,6 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer addCustomer(Customer customer) {
-        logger.info("Attempting to Add a Customer");
-        return this.customerDAO.save(customer);
-    }
-
-    @Override
-    public Customer updateCustomer(Customer customer) {
-        logger.info("Attempting to Update a Customer");
-        return this.customerDAO.save(customer);
-    }
-
-    @Override
     public String deleteCustomerById(long id) {
         logger.warn(STR."Attempting to Delete Customer with id:\{id}");
         this.customerDAO.deleteById(id);
@@ -95,16 +83,28 @@ public class CustomerServiceImpl implements CustomerService {
         return "Deleted Successfully";
     }
 
-    @Override
     public List<Customer> addCustomers(List<Customer> customers) {
-        logger.info("Attempting to Add Multiple Customers");
-        return this.customerDAO.saveAll(customers);
+        logger.info("Attempting to Add Customers");
+
+        if (customers.size() == 1) {
+            logger.info("Adding a Single Customer");
+            return List.of(this.customerDAO.save(customers.getFirst()));
+        } else {
+            logger.info("Adding Multiple Customers");
+            return this.customerDAO.saveAll(customers);
+        }
     }
 
-    @Override
     public List<Customer> updateCustomers(List<Customer> customers) {
-        logger.info("Attempting to Update Multiple Customers");
-        return this.customerDAO.saveAll(customers);
+        logger.info("Attempting to Update Customers");
+
+        if (customers.size() == 1) {
+            logger.info("Updating a Single Customer");
+            return List.of(this.customerDAO.save(customers.getFirst()));
+        } else {
+            logger.info("Updating Multiple Customers");
+            return this.customerDAO.saveAll(customers);
+        }
     }
 
 
