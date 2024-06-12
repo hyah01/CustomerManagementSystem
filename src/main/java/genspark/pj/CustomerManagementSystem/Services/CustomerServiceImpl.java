@@ -30,12 +30,11 @@ public class CustomerServiceImpl implements CustomerService {
         Optional<Customer> t = this.customerDAO.findById(id);
         Customer customer = null;
         // if customer exist, return it
-        if (t.isPresent()){
-            customer=t.get();
-        } else {
-            logger.info(STR."Customer Not Found :\{id}");
-            throw new RuntimeException(STR."Customer Not Found :\{id}");
-        }
+            if (t.isPresent()) {
+                customer = t.get();
+            }else {
+                logger.info(STR."Customer Not Found ID: \{id}");
+            }
         return customer;
     }
 

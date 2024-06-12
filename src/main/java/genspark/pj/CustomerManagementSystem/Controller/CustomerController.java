@@ -1,16 +1,29 @@
 package genspark.pj.CustomerManagementSystem.Controller;
 
 import genspark.pj.CustomerManagementSystem.Entity.Customer;
+import genspark.pj.CustomerManagementSystem.ErrorHandler.CustomerValidator;
 import genspark.pj.CustomerManagementSystem.Services.CustomerService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
+@Validated
 public class CustomerController {
     @Autowired
     private CustomerService cs;
+
+    @Autowired
+    private CustomerValidator validator;
+
+    private final Logger logger = LoggerFactory.getLogger(CustomerController.class);
 
     @GetMapping("/")
     public String home(){
@@ -23,7 +36,7 @@ public class CustomerController {
     }
 
     @GetMapping("/customers/{id}")
-    public Customer getCustomersById(long id){
+    public Customer getCustomersById(@PathVariable Long id){
         return this.cs.getCustomerById(id);
     }
 
@@ -55,8 +68,14 @@ public class CustomerController {
         return this.cs.getCustomersByPhoneSort();
     }
     @PostMapping("/customers")
-    public List<Customer> addCustomers(@RequestBody List<Customer> customers){
-        return this.cs.addCustomers(customers);
+    public List<Customer> addCustomers(@Valid @RequestBody List<Customer> customers, BindingResult result){
+        validator.validate(customers,result);
+        if (result.hasErrors()){
+            logger.error("Invalid Input");
+        } else {
+            return this.cs.addCustomers(customers);
+        }
+        return null;
     }
     @PutMapping("/customers")
     public List<Customer> updateCustomers(@RequestBody List<Customer> customers){
