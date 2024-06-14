@@ -19,7 +19,6 @@ public class CustomerController {
     private CustomerService cs;
     @Autowired
     private CustomerValidator validator;
-    private final Logger logger = LoggerFactory.getLogger(CustomerController.class);
 
     // Home page
     @GetMapping("/")
@@ -30,13 +29,7 @@ public class CustomerController {
     // Return all customers
     @GetMapping("/customers")
     public List<Customer> getCustomers(){
-        List<Customer> listOfCustomers = this.cs.getAllCustomers();
-        if (listOfCustomers.isEmpty()){
-            logger.info("There is currently no customer in the database");
-        } else {
-            logger.info("Successfully Retrieved All Customers");
-        }
-        return listOfCustomers;
+        return this.cs.getAllCustomers();
     }
 
     // Return customer with that ID
@@ -48,37 +41,19 @@ public class CustomerController {
     // Get all user with matching name or name that includes :name
     @GetMapping("/customers/name")
     public List<Customer> getCustomerByName(@RequestParam String name) {
-        List<Customer> listOfCustomers = this.cs.getCustomerByName(name);
-        if (listOfCustomers.isEmpty()){
-            logger.info(STR."There is currently no Customers with the name: \{name}");
-        } else {
-            logger.info(STR."Successfully Retrieved Customers with the name: \{name}");
-        }
-        return listOfCustomers;
+        return this.cs.getCustomerByName(name);
     }
 
     // Get all user with matching email or email that includes :email
     @GetMapping("/customers/email")
     public List<Customer> getCustomerByEmail(@RequestParam String email) {
-        List<Customer> listOfCustomers = this.cs.getCustomerByEmail(email);
-        if (listOfCustomers.isEmpty()){
-            logger.info(STR."There is currently no Customers with the email: \{email}");
-        } else {
-            logger.info(STR."Successfully Retrieved Customers with the email: \{email}");
-        }
-        return listOfCustomers;
+        return this.cs.getCustomerByEmail(email);
     }
 
     // Get all user with matching phone number or phone number  that includes :phone
     @GetMapping("/customers/phone")
     public List<Customer> getCustomerByPhone(@RequestParam String phone) {
-        List<Customer> listOfCustomers = this.cs.getCustomerByPhone(phone);
-        if (listOfCustomers.isEmpty()){
-            logger.info(STR."There is currently no Customers with the phone number: \{phone}");
-        } else {
-            logger.info(STR."Successfully Retrieved Customers with the phone number: \{phone}");
-        }
-        return listOfCustomers;
+        return this.cs.getCustomerByPhone(phone);
     }
 
     // Return all customers sorted by name
@@ -102,16 +77,10 @@ public class CustomerController {
     // Add customer to database if it passes validation
     @PostMapping("/customers")
     public List<Customer> addCustomers(@Valid @RequestBody List<Customer> customers, BindingResult result){
-        logger.info("Attempting to Add Customers");
         // Validate the inputs to see if there's any error
         validator.validate(customers,result);
-        if (result.hasErrors()){
-            // if fails print error and its location
-            logger.error(STR."Validation Failed: \{result.getAllErrors()}");
-        } else {
-            List<Customer> listOfCustomers = this.cs.addCustomers(customers);
-            logger.info("Successfully Added Customers");
-            return listOfCustomers;
+        if (!result.hasErrors()){
+            return this.cs.addCustomers(customers);
         }
         return null;
     }
@@ -119,14 +88,10 @@ public class CustomerController {
     // Update customer if it passes validation
     @PutMapping("/customers")
     public List<Customer> updateCustomers(@Valid @RequestBody List<Customer> customers, BindingResult result){
-        logger.info("Attempting to Update Customers");
+        // Validate the inputs to see if there's any error
         validator.validate(customers,result);
-        if (result.hasErrors()){
-            logger.error(STR."Validation Failed: \{result.getAllErrors()}");
-        } else {
-            List<Customer> listOfCustomers = this.cs.updateCustomers(customers);
-            logger.info("Successfully Updated Customers");
-            return listOfCustomers;
+        if (!result.hasErrors()){
+            return this.cs.updateCustomers(customers);
         }
         return null;
     }

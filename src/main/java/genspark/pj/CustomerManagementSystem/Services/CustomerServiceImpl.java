@@ -13,29 +13,23 @@ import java.util.Optional;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
-    public Logger logger = LoggerFactory.getLogger(CustomerController.class);
     @Autowired
     private CustomerDAO customerDAO;
 
     // Run query to get all customers
     @Override
     public List<Customer> getAllCustomers() {
-        logger.info("Attempting to Retrieve All Customers");
         return this.customerDAO.findAll();
     }
 
     // Run query to get customer with id
     @Override
     public Customer getCustomerById(Long id) {
-        logger.info(STR."Attempting to Retrieve Customers by ID: \{id}");
         Optional<Customer> t = this.customerDAO.findById(id);
         Customer customer = null;
         // if customer exist, return it
             if (t.isPresent()) {
                 customer = t.get();
-                logger.info(STR."Successfully Retrieved Customer with ID: \{id}");
-            }else {
-                logger.info(STR."Customer Not Found ID: \{id}");
             }
         return customer;
     }
@@ -43,71 +37,59 @@ public class CustomerServiceImpl implements CustomerService {
     // Run query to get all customers with name
     @Override
     public List<Customer> getCustomerByName(String name) {
-        logger.info(STR."Attempting to Retrieve Customers by Name: \{name}");
         return this.customerDAO.findByName(name);
     }
 
     // Run query to get all customers with email
     @Override
     public List<Customer> getCustomerByEmail(String email) {
-        logger.info(STR."Attempting to Retrieve a Customer by Email: \{email}");
         return this.customerDAO.findByEmail(email);
     }
 
     // Run query to get all customers with phone number
     @Override
     public List<Customer> getCustomerByPhone(String phonenumber) {
-        logger.info(STR."Attempting to Retrieve a Customer by Phone Number: \{phonenumber}");
         return this.customerDAO.findByPhone(phonenumber);
     }
 
     // Run query to get all customers sorted by name
     @Override
     public List<Customer> getCustomersByNameSort() {
-        logger.info("Attempting to Retrieve Customers by Sorted Names");
         return this.customerDAO.getCustomerNameSort();
     }
 
     // Run query to get all customers sorted by email
     @Override
     public List<Customer> getCustomersByEmailSort() {
-        logger.info("Attempting to Retrieve Customers by Sorted Emails");
         return this.customerDAO.getCustomerEmailSort();
     }
 
     // Run query to get all customers sorted by phone number
     @Override
     public List<Customer> getCustomersByPhoneSort() {
-        logger.info("Attempting to Retrieve Customers by Sorted Phone Numbers");
         return this.customerDAO.getCustomerPhoneSort();
     }
 
     // Delete query if valid id
     @Override
     public String deleteCustomerById(long id) {
-        logger.warn(STR."Attempting to Delete Customer with id:\{id}");
         this.customerDAO.deleteById(id);
-        logger.info(STR."Successfully Deleted Customer with id:\{id}");
         return "Deleted Successfully";
     }
 
     // INSERT query
     public List<Customer> addCustomers(List<Customer> customers) {
         if (customers.size() == 1) {
-            logger.info("Adding a Single Customer");
             return List.of(this.customerDAO.save(customers.getFirst()));
         } else {
-            logger.info("Adding Multiple Customers");
             return this.customerDAO.saveAll(customers);
         }
     }
 
     public List<Customer> updateCustomers(List<Customer> customers) {
         if (customers.size() == 1) {
-            logger.info("Updating a Single Customer");
             return List.of(this.customerDAO.save(customers.getFirst()));
         } else {
-            logger.info("Updating Multiple Customers");
             return this.customerDAO.saveAll(customers);
         }
     }
